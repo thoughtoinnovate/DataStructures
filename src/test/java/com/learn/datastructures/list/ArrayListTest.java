@@ -30,7 +30,9 @@ public class ArrayListTest {
 	public void testRemove() {
 
 		myList.remove(0);
+		System.out.println(myList);
 		myList.remove(8);
+		System.out.println(myList);
 
 		Assert.assertTrue(myList.size() == 8);
 

@@ -81,19 +81,12 @@ public class ArrayList<E> implements List<E> {
 		for (int i = 0; i < backingArray.length; i++) {
 
 			if (element.equals(backingArray[i])) {
-
-				for (int j = i; j < backingArray.length; j++) {
-
-					if ((j + 1) < backingArray.length) {
-						backingArray[j] = backingArray[j + 1];
-					}
-				}
+				removeAt(i);
 				break;
 			}
 		}
 
 		backingArray[lastIndex] = null;
-		lastIndex--;
 	}
 
 	@Override
